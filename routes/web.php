@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Products;
+use App\Http\Controllers\Dashboard;
 
 Route::get('/', function () {
     return view('welcome');
@@ -15,3 +16,5 @@ Route::get('/products',[Products::class,'GetProducts']);
 Route::get('/aboutus',[Products::class,'AboutUs'])->name('aboutus');
 Route::get('/contactus',[Products::class,'ContactUs'])->name('contactus');
 Route::get('/myprod',[Products::class,'MyProducts'])->name('myprod');
+
+Route::get('/dashboard',[Dashboard::class,'Index'])->name('dashboard');
